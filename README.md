@@ -88,5 +88,15 @@ _main:
     ret
  ```
  
+ ## Machine code
  
- 
+Machine code is term for the data in particular native machine format, which are directly processed by the machine - usually by the processor called CPU (Central Processing Unit).
+
+Common computer architecture (von Neumann architecture) consist of general purpose processor (CPU), general purpose memory - storing both program (ROM/RAM) and processed data and input and output devices (I/O devices).
+
+The major advantage of this architecture is relative simplicity and universality of each of components - when compared to computer machines before (with hard-wired program in the machine construction), or competing architectures (for example the Harvard architecture separating memory of program from memory of data). Disadvantage is a bit worse general performance. Over long run the universality allowed for flexible usage, which usually outweighed the performance cost.
+
+## How does this relate to machine code?
+
+Program and data are stored in these computers as numbers, in the memory. There's no genuine way to tell apart code from data, so the operating systems and machine operators give the CPU hints, at which entry point of memory starts the program, after loading all the numbers into memory. The CPU then reads the instruction (number) stored at entry point, and processing it rigorously, sequentially reading next numbers as further instructions, unless the program itself tells CPU to continue with execution elsewhere.
+
