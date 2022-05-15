@@ -13,7 +13,7 @@ Learning Assembly of single particular CPU will help to learn basics on differen
 
 Assembly language is a human readable form of machine language or machine code which is the actual sequence of bits and bytes on which the processor logic operates. It is generally easier for humans to read and program in mnemonics than binary, octal or hex, so humans typically write code in assembly language and then use one or more programs to convert it into the machine language format understood by the processor.
 
-```
+```asm
 mov eax, 4
 cmp eax, 5
 je point
@@ -43,7 +43,7 @@ There are many vendors for such tools, which are as varied as the processors for
 
 ## Hello world for Linux x86_64 (Intel 64 bit)
 
-```
+```asm
 section .data
     msg db "Hello world!",10      ; 10 is the ASCII code for a new line (LF)
 
