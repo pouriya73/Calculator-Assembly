@@ -210,5 +210,36 @@ MAIN PROC
     JMP EXIT_P  
     
    
-   
+   DIV:
+    LEA DX,MSG6
+    MOV AH,9
+    INT 21H
+    
+    
+    MOV AH,1
+    INT 21H
+    SUB AL,30H
+    MOV NUM1,AL
+    
+    
+    LEA DX,MSG7
+    MOV AH,9
+    INT 21H 
+    
+    
+    MOV AH,1
+    INT 21H
+    SUB AL,30H
+    MOV NUM2,AL
+    
+    MOV CL,NUM1
+    MOV CH,00
+    MOV AX,CX  
+    
+    DIV NUM2
+    MOV RESULT,AL
+    MOV AH, 00
+    AAD  
+    
+    
    
