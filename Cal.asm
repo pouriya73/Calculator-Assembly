@@ -105,4 +105,45 @@ MAIN PROC
     JMP EXIT_P 
     
     
-   
+      SUB:
+ 
+    LEA DX,MSG6  ;ENTER 1ST NUMBER
+    MOV AH,9
+    INT 21H 
+    
+    MOV AH,1
+    INT 21H
+    MOV BL,AL
+    
+    LEA DX,MSG7    ;ENTER 2ND NUMBER
+    MOV AH,9
+    INT 21H 
+    
+    
+    
+    MOV AH,1
+    INT 21H
+    MOV CL,AL
+    
+    SUB BL,CL
+    ADD BL,48
+    
+    
+    
+    
+    LEA DX,MSG8
+    MOV AH,9
+    INT 21H
+    
+    
+    MOV AH,2
+    MOV DL,BL
+    INT 21H
+    
+    
+    
+    ;LEA DX,MSG
+    ;MOV AH,9
+    ;INT 21H
+    
+    
