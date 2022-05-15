@@ -36,3 +36,6 @@ MAIN PROC
     MOV AH,9
     INT 21H 
     
+    LEA DX,MSG5
+    MOV AH,9
+    INT 21H
