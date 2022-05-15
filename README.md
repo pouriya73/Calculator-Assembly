@@ -115,4 +115,16 @@ dataValueDefinedInAssemblerSource:
     DB    60          ; define byte with value 60 right after the ret
     
 ```
+outputting byte hex-numbers sequence 3C C9 3C , wrapped around with optional additional numbers specific for target platform: marking which part of such binary is executable code, where is the entry point for program (the first instruction of it), which parts are encoded data (not executable), etc.
+
+Notice how the programmer specified the last byte with value 60 as "data", but from CPU perspective it does not differ in any way from INC a byte. It's up to the executing program to correctly navigate CPU over bytes prepared as instructions, and process data bytes only as data for instructions.
+
+Such output is usually stored in a file on storage device, loaded later by OS (Operating System - a machine code already running on the computer, helping to manipulate with the computer) into memory ahead of executing it, and finally pointing the CPU on the entry point of program.
+
+The CPU can process and execute only machine code - but any memory content, even random one, can be processed as such, although result may be random, ranging from "crash" detected and handled by OS up to accidental wipe of data from I/O devices, or damage of sensitive equipment connected to the computer (not a common case for home computers :) ).
+
+The similar process is followed by many other high level programming languages, compiling the source (human readable text form of program) into numbers, either representing the machine code (native instructions of CPU), or in case of interpreted/hybrid languages into some general language-specific virtual machine code, which is further decoded into native machine code during execution by interpreter or virtual machine.
+
+Some compilers use the Assembler as intermediate stage of compilation, translating the source firstly into Assembler form, then running assembler tool to get final machine code out of it (GCC example: run gcc -S helloworld.c to get an assembler version of C program helloworld.c ).
+
 
