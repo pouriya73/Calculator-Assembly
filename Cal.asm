@@ -147,3 +147,44 @@ MAIN PROC
     ;INT 21H
     
     
+    
+    JMP EXIT_P 
+    
+    
+    
+    
+   MUL:
+ 
+    LEA DX,MSG6
+    MOV AH,9
+    INT 21H
+    
+    
+    MOV AH,1
+    INT 21H
+    SUB AL,30H
+    MOV NUM1,AL
+    
+    
+    LEA DX,MSG7
+    MOV AH,9
+    INT 21H 
+    
+    
+    MOV AH,1
+    INT 21H
+    SUB AL,30H
+    MOV NUM2,AL
+    
+    
+    MUL NUM1
+    MOV RESULT,AL
+    AAM  
+    
+    
+    ADD AH,30H
+    ADD AL,30H
+    
+    
+    MOV BX,AX 
+    
