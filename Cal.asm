@@ -39,3 +39,23 @@ MAIN PROC
     LEA DX,MSG5
     MOV AH,9
     INT 21H
+
+    MOV AH,1
+    INT 21H
+    MOV BH,AL
+    SUB BH,48
+    
+    CMP BH,1
+    JE ADD
+    
+    CMP BH,2
+    JE SUB
+     
+    CMP BH,3
+    JE MUL
+    
+    CMP BH,4
+    JE DIV
+    
+    
+    
