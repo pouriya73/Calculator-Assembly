@@ -100,3 +100,9 @@ The major advantage of this architecture is relative simplicity and universality
 
 Program and data are stored in these computers as numbers, in the memory. There's no genuine way to tell apart code from data, so the operating systems and machine operators give the CPU hints, at which entry point of memory starts the program, after loading all the numbers into memory. The CPU then reads the instruction (number) stored at entry point, and processing it rigorously, sequentially reading next numbers as further instructions, unless the program itself tells CPU to continue with execution elsewhere.
 
+For example a two 8 bit numbers (8 bits grouped together are equal to 1 byte, that's an unsigned integer number within 0-255 range): 60 201 , when executed as code on Zilog Z80 CPU will be processed as two instructions: INC a (incrementing value in register a by one) and RET (returning from sub-routine, pointing CPU to execute instructions from different part of memory).
+
+To define this program a human can enter those numbers by some memory/file editor, for example in hex-editor as two bytes: 3C C9 (decimal numbers 60 and 201 written in base 16 encoding). That would be programming in machine code.
+
+To make the task of CPU programming easier for humans, an Assembler programs were created, capable to read text file containing something like:
+
