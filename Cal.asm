@@ -243,3 +243,46 @@ MAIN PROC
     
     
    
+    ADD AH,30H
+    ADD AL,30H
+    
+    
+    MOV BX,AX 
+    
+    
+    LEA DX,MSG8
+    MOV AH,9
+    INT 21H 
+    
+    MOV AH,2
+    MOV DL,BH
+    INT 21H
+    
+    MOV AH,2
+    MOV DL,BL
+    INT 21H
+    
+    
+    ;LEA DX,MSG
+    ;MOV AH,9
+    ;INT 21H 
+    
+    JMP EXIT_P
+    
+    EXIT_P:
+    
+        LEA DX,MSG
+        MOV AH,9
+        INT 21H  
+  
+    
+   
+         
+        
+    EXIT:
+    
+    MOV AH,4CH
+    INT 21H
+    MAIN ENDP
+END MAIN
+
