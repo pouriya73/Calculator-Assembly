@@ -11,3 +11,7 @@ MSG7 DB 10,13,'Enter Second Number:$'
 MSG8 DB 10,13,10,13,'Calculate  :$' 
 MSG DB 10,13,10,13,'$'
             
+NUM1 DB ?
+NUM2 DB ?
+RESULT DB ?
+.CODE
