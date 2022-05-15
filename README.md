@@ -23,7 +23,8 @@ An assembler is a program that reads the assembly language program, parses it, a
 
 Generally, the inventor of the processor documents the processor and its machine code and creates an assembly language. It's common for that particular assembly language to be the only one used, but unlike compiler writers attempting to conform to a language standard, the assembly language defined by the inventor of the processor is usually but not always the version used by the people who write assemblers.
 
-There are two general types of processors:
+
+## There are two general types of processors:
 
 CISC (Complex Instruction Set Computer): have many different and often complex machine language instructions
 
