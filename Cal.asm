@@ -71,4 +71,22 @@ MAIN PROC
     MOV AH,9
     INT 21H 
     
-   
+       MOV AH,1
+    INT 21H
+    MOV CL,AL
+    
+    ADD AL,BL
+    MOV AH,0
+    AAA
+    
+    
+    MOV BX,AX 
+    ADD BH,48
+    ADD BL,48 
+    
+ 
+    
+    LEA DX,MSG8
+    MOV AH,9
+    INT 21H
+    
