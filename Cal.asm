@@ -90,3 +90,19 @@ MAIN PROC
     MOV AH,9
     INT 21H
     
+    MOV AH,2
+    MOV DL,BH
+    INT 21H
+    
+    MOV AH,2
+    MOV DL,BL
+    INT 21H
+    
+    ;LEA DX,MSG
+    ;MOV AH,9
+    ;INT 21H 
+    
+    JMP EXIT_P 
+    
+    
+   
