@@ -15,3 +15,11 @@ NUM1 DB ?
 NUM2 DB ?
 RESULT DB ?
 .CODE
+
+MAIN PROC
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    LEA DX,MSG1
+    MOV AH,9
+    INT 21H
