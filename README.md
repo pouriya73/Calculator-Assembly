@@ -38,3 +38,27 @@ A complete "toolchain" often consists of a compiler, assembler and linker. One c
 Small microcontrollers are often programmed purely in assembly language or in a combination of assembly language and one or more higher level languages such as C or C++. This is done because one can often use the particular aspects of the instruction set architecture for such devices to write more compact, efficient code than would be possible in a higher level language and such devices often have limited memory and registers. Many microprocessors are used in embedded systems which are devices other than general purpose computers that happen to have a microprocessor inside. Examples of such embedded systems are televisions, microwave ovens and the engine control unit of a modern automobile. Many such devices have no keyboard or screen, so a programmer generally writes the program on a general purpose computer, runs a cross-assembler (so called because this kind of assembler produces code for a different kind of processor than the one on which it runs) and/or a cross-compiler and cross linker to produce machine code.
 
 There are many vendors for such tools, which are as varied as the processors for which they produce code. Many, but not all processors also have an open source solution like GNU, sdcc, llvm or other.
+
+
+## Hello world for Linux x86_64 (Intel 64 bit)
+
+```
+section .data
+    msg db "Hello world!",10      ; 10 is the ASCII code for a new line (LF)
+
+section .text
+    global _start
+
+_start:
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, msg
+    mov rdx, 13
+    syscall
+    
+    mov rax, 60
+    mov rdi, 0
+    syscall
+ ```
+ 
+ 
