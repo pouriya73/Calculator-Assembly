@@ -106,3 +106,13 @@ To define this program a human can enter those numbers by some memory/file edito
 
 To make the task of CPU programming easier for humans, an Assembler programs were created, capable to read text file containing something like:
 
+```asm
+subroutineIncrementA:
+    INC   a
+    RET
+
+dataValueDefinedInAssemblerSource:
+    DB    60          ; define byte with value 60 right after the ret
+    
+```
+
