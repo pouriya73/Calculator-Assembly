@@ -58,4 +58,17 @@ MAIN PROC
     JE DIV
     
     
+      ADD:
+    LEA DX,MSG6  ;ENTER 1ST NUMBER
+    MOV AH,9
+    INT 21H 
     
+    MOV AH,1
+    INT 21H
+    MOV BL,AL
+    
+    LEA DX,MSG7    ;ENTER 2ND NUMBER
+    MOV AH,9
+    INT 21H 
+    
+   
