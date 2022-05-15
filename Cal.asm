@@ -31,3 +31,8 @@ MAIN PROC
     LEA DX,MSG3
     MOV AH,9
     INT 21H
+
+    LEA DX,MSG4
+    MOV AH,9
+    INT 21H 
+    
